@@ -2,6 +2,7 @@
 var btn = document.getElementById("heartTxt");
 btn.style.opacity = 0;
 var btnVal = 0;
+var myMusic = document.getElementById("music");
 
 function showImage() {
 	//document.getElementById("imgTxt").style.opacity = 0;
@@ -17,6 +18,7 @@ function showImage() {
 }
 
 function play() {
+	myMusic.play();
 	if (t == 0) {
 		myImage.setAttribute("src", "");
 		myTxt.innerHTML = "";
@@ -28,7 +30,7 @@ function play() {
 	document.getElementById("imgTxt").style.opacity = 1 - flag;
 	if (t == 0) {
 		//setTimeout(showImage, 1000);
-		setInterval(showImage, 2500);
+		setInterval(showImage, 3000);
 	}
 	t++;
 }
